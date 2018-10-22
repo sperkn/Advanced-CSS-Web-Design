@@ -5,13 +5,22 @@
   background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../img/hero.jpeg);
   background-size: cover;
   background-position: center;
-  padding: 4rem 8rem 8rem 8rem;
+  padding: 8rem;
+  padding-top: 4rem;
 
   display: grid;
   grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
   grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem; 
   justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
 
   &__logo {
     height: 3rem;
